@@ -1,25 +1,28 @@
 import java.util.Scanner;
-
 public class Atividade5 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in)
 
-        System.out.println("Insira a nota do Exercício 1 \n");
-        int exercício1 = scanner.nextInt();
+   public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Insira a nota do Exercício 2 \n");
-        int exercício2 = scanner.nextInt();
+        System.out.print("10P1: ");
+        double p1 = scanner.nextDouble();
+        System.out.print("E1: ");
+        double e1 = scanner.nextDouble();
+        System.out.print("E2: ");
+        double e2 = scanner.nextDouble();
+        System.out.print("API: ");
+        double api = scanner.nextDouble();
+        System.out.print("SUB: ");
+        double sub = scanner.nextDouble();
+        System.out.print("Extras: ");
+        double ex = scanner.nextDouble();
 
-        System.out.println("Insira a nota da Prova 1: \n");
-        int prova1 = scanner.nextInt();
 
-        System.out.println("Insira a nota da API: \n");
-        int API = scanner.nextInt();
+        double notaFinal = 0.0;
+        double primeiraParte = (p1 * 0.6 + ((e1 + e2) / 2) * 0.4) * 0.5;
+        double segundaParte = Math.max(((p1 * 0.6 + ((e1 + e2) / 2) * 0.4) - 5.9), 0) / ((p1 * 0.6 + ((e1 + e2) / 2) * 0.4) - 5.9);
+        notaFinal = primeiraParte + segundaParte * (api*0.5) + ex + (sub * 0.2);
 
-        System.out.println("Insira a nota da Atividade Extra: \n");
-        int atvext = scanner.nextInt();
-
-        System.out.println("Insira a nota da prova substitutiva: \n");
-        int subs = scanner.nextInt();
-    }
+        System.out.println("A nota final é: " + notaFinal);
+}
 }
