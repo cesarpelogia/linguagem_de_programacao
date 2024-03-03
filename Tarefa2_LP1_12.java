@@ -1,5 +1,0 @@
-// Ler dois valores (considere que não serão lidos valores iguais) e escrever o maior deles. 
-
-public class Tarefa2_LP1_12 {
-    
-}
