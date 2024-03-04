@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-// Ler dois valores (considere que não serão lidos valores iguais) e escrever o maior deles. 
+// Ler dois valores (considere que não serão lidos valores iguais) e escrever o maior deles.
 
 import java.util.Scanner;
 public class Tarefa2_LP1_12 {

@@ -13,10 +13,11 @@ public class Tarefa2_LP1_06 {
         double tempF = scanner.nextDouble();
 
         double tempC = (tempF - 32) / 1.8;
+        String tempCFormatado = String.format("%.2f", tempC);
 
-        System.out.println("A temperatura " + tempF + "° Fahrenheit equivale a " + tempC + "° Celsius");
+        System.out.println("A temperatura " + tempF + "° Fahrenheit equivale a " + tempCFormatado + "° Celsius");
 
         scanner.close();
     }
-    
 }
+
