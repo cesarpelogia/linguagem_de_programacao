@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef41dc01-16ba-4b3e-ac00-e46395696397" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Primeiros Exercícios/Atividade0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Primeiros Exercícios/Atividade1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Primeiros Exercícios/Atividade2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Primeiros Exercícios/Atividade3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Primeiros Exercícios/Atividade4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Primeiros Exercícios/Atividade5.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2d96w0OCoYRVDphCysm6RuJtrXJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Tarefa2_LP1_01.executor": "Run",
+    "Application.Tarefa2_LP1_02.executor": "Run",
+    "Application.Tarefa2_LP1_03.executor": "Run",
+    "Application.Tarefa2_LP1_04.executor": "Run",
+    "Application.Tarefa2_LP1_06.executor": "Run",
+    "Application.Tarefa2_LP1_07.executor": "Run",
+    "Application.Tarefa2_LP1_08.executor": "Run",
+    "Application.Tarefa2_LP1_09.executor": "Run",
+    "Application.Tarefa2_LP1_10.executor": "Run",
+    "Application.Tarefa2_LP1_11.executor": "Run",
+    "Application.Tarefa2_LP1_13.executor": "Run",
+    "Application.Tarefa2_LP1_15.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Win-10/Documents/FATEC/2º Semestre/linguagem_de_programacao/Tarefa2_LP1"
+  }
+}]]></component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\Win-10\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="b5266545-87d0-4a53-b094-189f9d767aee" reportId="Tarefa2_LP1/qodana/2024-03-02" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tarefa2_LP1_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tarefa2_LP1_01" />
+      <module name="Tarefa2_LP1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Tarefa2_LP1_01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef41dc01-16ba-4b3e-ac00-e46395696397" name="Changes" comment="" />
+      <created>1709408182421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709408182421</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tarefa2_LP1_01.java</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tarefa2_LP1_09.java</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tarefa2_LP1_14.java</url>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,17 +1,35 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Guitarra c1 = new Guitarra();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Definindo valores usando set
+        c1.setMarca("Gibson");
+        c1.setModelo("Les Paul");
+        c1.setCor("Sunbusrt");
+        c1.setCorda(6);
+
+        // Obtendo valores usando get
+        String marcaC1 = c1.getMarca();
+        String modeloC1 = c1.getModelo();
+        String corC1 = c1.getCor();
+        int cordaC1 = c1.getCorda();
+
+        System.out.println("Essa guitarra é uma " + marcaC1 + " " + modeloC1 + ", na cor " + corC1 + " de " + cordaC1 + " cordas.");
+
+
+        c1.aumentarVolume(70);
+        c1.abaixarVolume(30);
+        c1.aumentarTon(20);
+        c1.diminuirTon(40);
+        c1.plugarGuitarra(false);
+        c1.desplugarGuitarra(false);
+        c1.qntdCorda(6);
+
     }
 }
+
+
