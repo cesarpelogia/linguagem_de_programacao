@@ -85,7 +85,6 @@ public class Guitarra {
         if (plugandoGuitarra == plug) {
             System.out.println("Plugue a guitarra!");
         } else {
-            plug = true;
             System.out.println("A guitarra está plugada!");
         }
     }
@@ -94,8 +93,7 @@ public class Guitarra {
         if (desplugandoGuitarra == plug) {
             System.out.println("A guitarra já está desplugada");
         } else {
-            plug = false;
-            System.out.println("Silêncio, até que enfim!");
+            System.out.println("Plugue a guitarra");
         }
     }
 
