@@ -22,7 +22,6 @@ public class Guitarra {
     // Métodos
 
     public void aumentarVolumeG(int aumentandoVolumeG) {
-
         int novoVol = volAtual + aumentandoVolumeG;
 
         // Verifica se o novo volume não ultrapassa o máximo.
@@ -107,17 +106,16 @@ public class Guitarra {
     public String setMarca(String marca) {
         return marca = this.marca;
     }
-
     public String setModelo(String modelo) {
         return modelo = this.modelo;
     }
-
     public String setCor(String cor) {
         return cor = this.cor;
     }
     public int setCorda(int corda){
         return corda = this.corda;
     }
+
 
     // Metodos de Acesso Get
 
