@@ -1,12 +1,11 @@
 package org.example;
 
-public class Guitarra {
+public class Baixo {
 
-    // Atributos
     private String marca;
     private String modelo;
     private String cor;
-    private int corda;
+    private int cordaB;
 
     int volMin = 0;
     int volMax = 100;
@@ -21,9 +20,9 @@ public class Guitarra {
 
     // Métodos
 
-    public void aumentarVolumeG(int aumentandoVolumeG) {
+    public void aumentarVolumeB(int aumentandoVolumeB) {
 
-        int novoVol = volAtual + aumentandoVolumeG;
+        int novoVol = volAtual + aumentandoVolumeB;
 
         // Verifica se o novo volume não ultrapassa o máximo.
         if (novoVol >= volMin && novoVol <= volMax) {
@@ -34,8 +33,8 @@ public class Guitarra {
         }
     }
 
-    public void abaixarVolumeG(int abaixandoVolumeG) {
-        int novoVol = volAtual - abaixandoVolumeG;
+    public void abaixarVolumeB(int abaixandoVolumeB) {
+        int novoVol = volAtual - abaixandoVolumeB;
 
         // Verifica se o novo volume não ultrapassa o mínimo.
         if (novoVol >= volMin && novoVol <= volMax) {
@@ -47,8 +46,8 @@ public class Guitarra {
     }
 
     // Aumentando tonalidade
-    public void aumentarTonG(int aumentandoTonG) {
-        int novoTon = tonAtual + aumentandoTonG;
+    public void aumentarTonB(int aumentandoTonB) {
+        int novoTon = tonAtual + aumentandoTonB;
 
         // Verifica se o novo volume não ultrapassa o máximo.
         if (novoTon >= tonMin && novoTon <= tonMax) {
@@ -61,8 +60,8 @@ public class Guitarra {
     }
 
     // Diminuindo tonalidade
-    public void diminuirTonG(int diminuindoTonG) {
-        int novoTon = tonAtual - diminuindoTonG;
+    public void diminuirTonB(int diminuindoTonB) {
+        int novoTon = tonAtual - diminuindoTonB;
 
         // Verifica se o novo volume não ultrapassa o mínimo.
         if (novoTon >= tonMin && novoTon <= tonMax) {
@@ -74,8 +73,8 @@ public class Guitarra {
     }
 
     // Verificando se guitarra está plugada
-    public void plugarGuitarra(boolean plugandoGuitarra) {
-        if (plugandoGuitarra == plug) {
+    public void plugarBaixo(boolean plugandoBaixo) {
+        if (plugandoBaixo == plug) {
             System.out.println("Plugue a guitarra!");
         } else {
             System.out.println("A guitarra está plugada!");
@@ -83,57 +82,59 @@ public class Guitarra {
     }
 
     // Verificando se a guitarra está desplugada
-    public void desplugarGuitarra(boolean desplugandoGuitarra) {
-        if (desplugandoGuitarra == plug) {
+    public void desplugarBaixo(boolean desplugandoBaixo) {
+        if (desplugandoBaixo == plug) {
             System.out.println("A guitarra já está desplugada");
         } else {
             System.out.println("Plugue a guitarra");
         }
     }
 
-    public void qntdCordaG(int qtsCordas) {
-        if (qtsCordas == 6) {
-            System.out.println("Seja bem-vindo! Logo um vendedor te atenderá!");
-        } else if (qtsCordas > 6) {
-            System.out.println("Não possuímos guitarras com mais de 6 cordas na loja");
+    public void qntdCordaB(int qtsCordasB) {
+        if (qtsCordasB == cordaB) {
+            System.out.println("O clássico 4 cordas!");
+        } else if (qtsCordasB == 5) {
+            System.out.println("Entendi! Você gostaria de um 5 cordas");
         } else {
-            System.out.println("Não existe guitarra com menos de 6 cordas");
+            System.out.println("Olhá só! Um 6 cordas");
         }
     }
 
 
     // Metodos de Acesso Set:
-
     public String setMarca(String marca) {
+
         return marca = this.marca;
     }
-
     public String setModelo(String modelo) {
+
         return modelo = this.modelo;
     }
-
     public String setCor(String cor) {
+
         return cor = this.cor;
     }
     public int setCorda(int corda){
-        return corda = this.corda;
+
+        return corda = this.cordaB;
     }
 
-    // Metodos de Acesso Get
 
+    // Metodos de acesso Get
     public String getMarca(){
+
         return this.marca;
     }
     public String getModelo(){
+
         return this.modelo;
     }
     public String getCor(){
+
         return this.cor;
     }
     public int getCorda(){
-        return this.corda;
+
+        return this.cordaB;
     }
-
-
-
 }
