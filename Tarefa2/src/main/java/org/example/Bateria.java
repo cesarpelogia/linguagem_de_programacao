@@ -34,7 +34,7 @@ public class Bateria {
 
     // quantidade de pratos.
     public int qntdPratos(int qtsPratos) {
-        System.out.println("Essa bateria possui " + prato + " pratos.");
+        System.out.println("Essa bateria possui " + this.prato + " pratos.");
         return this.prato;
     }
 
