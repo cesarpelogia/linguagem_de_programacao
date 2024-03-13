@@ -7,11 +7,11 @@ public class Teclado {
     private String marcaT;
     private String corT;
     private int tecla;
-
     boolean ligado = true;
 
     // Metodos
 
+    // Ligando Teclado
     public void ligarTeclado (boolean ligandoTeclado){
         if (ligandoTeclado == ligado){
             System.out.print("Teclado está ligado");
@@ -20,10 +20,12 @@ public class Teclado {
         }
     }
 
+    // Tocando teclado
     public void tocarTeclado (String tocandoTeclado){
         System.out.println("Dó ré mí fá!");
     }
 
+    // Deligando teclado
     public void desligarTeclado (boolean desligandoTeclado){
         if (desligandoTeclado != ligado){
             System.out.println("O Teclado está delisgado");

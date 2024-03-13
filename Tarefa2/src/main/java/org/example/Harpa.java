@@ -11,13 +11,15 @@ public class Harpa {
 
     // Métodos
 
+    // Dedilhando Harpa
     public void dedilharHarpa(boolean dedilhandoHarpa) {
         System.out.println("ti li lim");
     }
+
+    // Soando Harpa
     public void soarHarpa(boolean soandoHarpa) {
         System.out.println("tiiiliiinnnnnnn");
     }
-
 
     // Verificando se harpa está plugada
     public void plugarHarpa(boolean plugandoHarpa) {
@@ -37,6 +39,7 @@ public class Harpa {
         }
     }
 
+    // Verificando quantidade de cordas
     public void qntdCordaH(int qtsCordas) {
         if (qtsCordas == 47) {
             System.out.println("Seja bem-vindo! Logo um vendedor te atenderá!");

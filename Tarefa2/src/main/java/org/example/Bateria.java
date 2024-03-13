@@ -13,7 +13,7 @@ public class Bateria {
 
     // Metodos
 
-    // testando bumbo
+    // Testando bumbo
 
     public void testarBumbo(boolean testandoBumbo) {
         if (bumbo == true) {
@@ -23,7 +23,7 @@ public class Bateria {
         }
     }
 
-    // testando caixa
+    // Testando caixa
     public void testarCaixa(boolean testandoCaixa) {
         if (caixa == true) {
             System.out.println("Tá Tá");
@@ -32,7 +32,7 @@ public class Bateria {
         }
     }
 
-    // quantidade de pratos.
+    // Quantidade de pratos.
     public int qntdPratos(int qtsPratos) {
         System.out.println("Essa bateria possui " + this.prato + " pratos.");
         return this.prato;

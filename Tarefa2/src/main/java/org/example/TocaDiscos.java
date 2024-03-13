@@ -17,6 +17,7 @@ public class TocaDiscos {
 
     // Métodos
 
+    // Aumentando Volume
     public void aumentarVolumeTD(int aumentandoVolumeTD) {
         int novoVol = volAtual + aumentandoVolumeTD;
 
@@ -29,6 +30,7 @@ public class TocaDiscos {
         }
     }
 
+    // Diminuindo Volume
     public void diminuirVolumeTD(int diminuindoVolumeTD) {
         int novoVol = volAtual - diminuindoVolumeTD;
 
@@ -41,6 +43,7 @@ public class TocaDiscos {
         }
     }
 
+    // Arranhando Toca Discos
     public void arranharTocaDiscos(boolean arranhndoTocaDiscos) {
         if (arranhndoTocaDiscos == ligado) {
             System.out.println("O Toca Discos já está ligado!");
@@ -50,6 +53,7 @@ public class TocaDiscos {
         }
     }
 
+    // Desligando Toca Discos
     public void desligarTocaDiscos(boolean desligandoTocaDiscos) {
         if (desligandoTocaDiscos == ligado) {
             System.out.println("O Toca Discos está desligado.");
@@ -58,11 +62,14 @@ public class TocaDiscos {
         }
     }
 
+    // Conferindo quantidade de Discos
     public void trocarDisco(int novosDiscos) {
         discosTD = novosDiscos;
         System.out.println("Agora temos " + discosTD + " discos no Toca Discos.");
     }
 
+
+    
     // Métodos de Acesso Set:
 
     public String setMarcaTD(String marcaTD) {
@@ -73,13 +80,12 @@ public class TocaDiscos {
         return this.modeloTD = modeloTD;
     }
 
-    public String setCorTD(String corTD) {
-        return this.corTD = corTD;
-    }
-
+    public String setCorTD(String corTD) { return this.corTD = corTD; }
     public int setDiscosTD(int discosTD) {
         return this.discosTD = discosTD;
     }
+
+
 
     // Métodos de Acesso Get
 

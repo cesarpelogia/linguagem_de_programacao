@@ -2,51 +2,63 @@ package org.example;
 
 public class RecoReco {
 
-    private String marca;
-    private String modelo;
-    private int peso;
-    private String estado;
+    private String marcaR;
+    private String modeloR;
+    private int pesoR;
+    private String estadoR;
 
 
     // Métodos
 
     // Produzir som do reco-reco
+
     public void produzirSom() {
         System.out.println("Reco Reco Reco");
     }
 
     // Verificar modelo
+
     public void verificarModelo( String verificandoModelo) {
-        if (verificandoModelo == this.modelo) {
+        if (verificandoModelo == this.modeloR) {
             System.out.println("É esse mesmo modelo!");
         } else {
             System.out.println("Infelizmente é outro modelo");
         }
     }
 
-    // Obter o peso
-    public int verificarPeso(int verificandoPeso) {
-        if (verificandoPeso >= this.peso) {
+    // Conferindo peso
+
+    public void verificarPeso(int verificandoPeso) {
+        if (verificandoPeso >= this.pesoR) {
             System.out.println("Está muito pesado!");
         } else {
             System.out.println("Esse mesmo!");
         }
-
     }
 
     // Obter nome do conjunto
-    public String getNomeConjunto() {
-        return nomeConjunto;
+
+    public String getMarcaR() {
+        return this.marcaR;
     }
+    public String getModeloR() {
+        return this.modeloR;
+    }
+    public int getPesoR() {
+        return this.pesoR;
+    }
+    public String getEstadoR() {
+        return this.estadoR;
+    }
+
 
     // Métodos de Acesso Set:
 
-    public void setQuantidadeDentes(int quantidadeDentes) {
-        this.quantidadeDentes = quantidadeDentes;
+    public String setMarcaR(String marcaR) {
+        return marcaR = this.marcaR;
     }
-
-    public void setPossuiGolpeador(boolean possuiGolpeador) {
-        this.possuiGolpeador = possuiGolpeador;
-    }
+    public String setModeloR (String modeloR) { return modeloR = this.modeloR; }
+    public int setPesoR(int pesoR) { return pesoR = this.pesoR; }
+    public String setEstadoR (String estadoR){ return estadoR = this.estadoR; }
 }
 

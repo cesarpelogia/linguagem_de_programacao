@@ -84,9 +84,13 @@ public class Main {
         String corD1 = d1.getCor();
         int pratoC1 = d1.getPrato();
 
+
+
         // Criando Teclado
 
         Teclado t1 = new Teclado();
+
+        // Obtendo valores usando set
 
         t1.setMarcaT("Roland");
         t1.setCorT("Preto");
@@ -96,6 +100,11 @@ public class Main {
         t1.desligarTeclado(false);
         t1.tocarTeclado("Sim");
 
+        // Obtendo valores usando get
+
+        String marcaT = t1.getMarcaT();
+        String corT = t1.getCorT();
+        int pratoT = t1.getTecla();
 
 
 
@@ -129,9 +138,11 @@ public class Main {
 
 
 
-        // Criaco Cavao
+        // Criaco Cavaco
 
         Cavaco c1 = new Cavaco();
+
+        // Obtendo valores usando set
 
         c1.setMarcaC("Gianini");
         c1.setModeloC("Carioca");
@@ -141,6 +152,8 @@ public class Main {
         c1.chorarCavaco(true);
         c1.afinarCavaco(true);
         c1.plugarCavaco(true);
+
+        // Obtendo valores usando get
 
         c1.getMarcaC();
         c1.getModeloC();
@@ -153,6 +166,7 @@ public class Main {
         Harpa h1 = new Harpa();
 
          // Definindo valores usando set
+
         h1.setMarcaH("Yamaha");
         h1.setModeloH("Clássica");
         h1.setCorH("Marrom");
@@ -165,6 +179,7 @@ public class Main {
         h1.qntdCordaH(47);
 
         // Obtendo valores usando get
+
         String marcaH1 = h1.getMarcaH();
         String modeloH1 = h1.getModeloH();
         String corH1 = h1.getCorH();
@@ -175,7 +190,6 @@ public class Main {
         // Criando Toca Discos
 
         TocaDiscos td1 = new TocaDiscos();
-
 
         // Definindo valores usando set
 
@@ -202,7 +216,6 @@ public class Main {
 
         Percussao p1 = new Percussao();
 
-
         // Definindo valores usando set
 
         p1.setSurdo(true);
@@ -215,9 +228,35 @@ public class Main {
         p1.girarPrato();
         p1.baterBaqueta();
 
+        // Obtendo valores usando get
+
         String modeloP1 = p1.getModelo();
         int totalPecasP1 = p1.getTotalPecas();
 
+
+
+        // Criando Reco Reco
+
+        RecoReco r1 = new RecoReco();
+
+
+        // Definindo valores usando set
+
+        r1.setMarcaR("Giannini");
+        r1.setModeloR("Plus");
+        r1.setPesoR(1);
+        r1.setEstadoR("Usado");
+
+        r1.produzirSom();
+        r1.verificarModelo("Qual modelo?");
+        r1.verificarPeso(2);
+
+        // Definindo valores usando set
+
+        String marcaR = r1.getMarcaR();
+        String modeloR = r1.getModeloR();
+        int pesoR = r1.getPesoR();
+        String estadoR = r1.getEstadoR();
     }
 }
 

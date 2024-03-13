@@ -19,6 +19,8 @@ public class Violao {
 
     // Métodos
 
+    // Aumentando Volume
+
     public void aumentarVolumeV(int aumentandoVolumeV) {
         int novoVol = volAtual + aumentandoVolumeV;
 
@@ -30,6 +32,8 @@ public class Violao {
             System.out.println("Já está no volume máximo.");
         }
     }
+
+    // Abaixando Volume
 
     public void abaixarVolumeV(int abaixandoVolumeV) {
         int novoVol = volAtual - abaixandoVolumeV;
@@ -44,6 +48,7 @@ public class Violao {
     }
 
     // Aumentando tonalidade
+
     public void aumentarTonV (int aumentandoTonV) {
         int novoTon = tonAtual + aumentandoTonV;
 
@@ -58,6 +63,7 @@ public class Violao {
     }
 
     // Diminuindo tonalidade
+
     public void diminuirTonV(int diminuindoTonV) {
         int novoTon = tonAtual - diminuindoTonV;
 
@@ -70,7 +76,7 @@ public class Violao {
         }
     }
 
-    // Verificando se guitarra está plugada
+    // Verificando se o Violão está plugado
     public void plugarViolao(boolean plugandoViolao) {
         if (plugandoViolao == plug) {
             System.out.println("Plugue o Violão!");
@@ -79,7 +85,7 @@ public class Violao {
         }
     }
 
-    // Verificando se a guitarra está desplugada
+    // Verificando se o Violão está desplugado
     public void desplugarViolao(boolean desplugandoViolao) {
         if (desplugandoViolao == plug) {
             System.out.println("O violão já está desplugado");
@@ -87,6 +93,8 @@ public class Violao {
             System.out.println("Plugue o violão");
         }
     }
+
+    // Verificando quantidade de corda
 
     public void qntdCordaV(int qtsCordas) {
         if (qtsCordas == 6) {
