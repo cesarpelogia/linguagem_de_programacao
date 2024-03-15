@@ -45,10 +45,9 @@ public class Fracao {
         return new Fracao (novoNumerador, novoDenominador);
     }
 
-    public Fracao divisão (Fracao F){
-        
+    public Fracao dividir(Fracao F) {
+        int novoNumerador = this.numerador * F.denominador;
+        int novoDenominador = this.denominador * F.numerador;
+        return new Fracao(novoNumerador, novoDenominador);
     }
-
-
-    
- }
+}
