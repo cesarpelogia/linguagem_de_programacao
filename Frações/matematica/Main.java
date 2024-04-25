@@ -49,15 +49,6 @@ public class Main {
             default:
                 System.out.println("Operação inválida.");
         }
-
-        // Simplificar o resultado
-        if (resultado != null) {
-            resultado.simplificar();
-            System.out.println("O resultado é: " + resultado.getNumerador() + "/" + resultado.getDenominador());
-        } else {
-            System.out.println("Operação inválida.");
-        }
-
         scanner.close();
 
     }
