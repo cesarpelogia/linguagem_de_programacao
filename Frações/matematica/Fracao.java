@@ -12,20 +12,6 @@ public class Fracao {
         this.denominador = d;
     }
 
-    private void simplificar() {
-        int mdc = mdc(this.numerador, this.denominador);
-        this.numerador /= mdc;
-        this.denominador /= mdc;
-    }
-
-    private int mdc(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
-        }
-        return a;
-    }
     
     // Metodos
     public Fracao somar(Fracao F) {
