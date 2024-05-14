@@ -6,7 +6,10 @@ public class BuscaEmLista {
         try {
             scanner = new Scanner(System.in);
             int[] lista = new int[10];
-            int i, item, achou;
+
+            int i;
+            int item;
+            int achou;
 
             // Preenche a lista
             for (i = 0; i < 10; i++) {
@@ -18,7 +21,7 @@ public class BuscaEmLista {
             item = scanner.nextInt();
 
             i = 0;
-            achou = 0; // 0 = FALSO, 1 = VERDADEIRO
+            achou = 0;
 
             // Procura na lista
             while (i < 10 && achou == 0) {
