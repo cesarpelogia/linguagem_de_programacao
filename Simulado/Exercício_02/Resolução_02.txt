@@ -5,5 +5,5 @@ a) Quais componentes são utilizados nesta interface gráfica?
     R.: Nessa tela, possuimos o AnchorPane, que faz o papel de contêiner principal,
     permitindo que mais componentes sejam ancordados a ele.
         Temos também, 2 botões, uma para procurar e outro para adicionar um termo.
-        
+        Além dos componentes citados acima, temos dois campos para insercao de texto, onde em um será inserido o termo e em outro a definição.
 
