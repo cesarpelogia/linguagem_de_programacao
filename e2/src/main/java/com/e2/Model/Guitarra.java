@@ -2,10 +2,10 @@ package com.e2.Model;
 
 public class Guitarra {
 
-    public String marcaG;
-    public String modeloG;
-    public String corG;
-    public String cordaG;
+    private String marcaG;
+    private String modeloG;
+    private String corG;
+    private String cordaG;
 
     public Guitarra(String marcaG, String modeloG, String corG, String cordaG) {
         this.marcaG = marcaG;
@@ -14,6 +14,8 @@ public class Guitarra {
         this.cordaG = cordaG;
     }
 
+    public Guitarra() {
+    }
     
 
     // Metodos de Acesso Set:
@@ -35,7 +37,7 @@ public class Guitarra {
     }
 
     // Metodos de Acesso Get
-
+    
     public String getMarcaG() {
         return this.marcaG;
     }

@@ -1,47 +1,33 @@
 package com.e2.Controller;
 
-import com.e2.Model.Guitarra;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class MainPageController {
 
     @FXML
-
-    private TextField guitarraMarcaTextField;
-
-    @FXML
-    private TextField guitarraModeloTextField;
+    private Button entrar;
 
     @FXML
-    private TextField guitarraCorTextField;
+    private void initialize() {
+        entrar.setOnAction(event -> entrar());
+    }
 
     @FXML
-    private TextField guitarraCordasTextField;
-
-    @FXML
-    private Button salvarButton;
-
-
-
-    @FXML
-    public void salvarGuitarra(ActionEvent event) {
-        String marcaG = guitarraMarcaTextField.getText();
-        String modeloG = guitarraModeloTextField.getText();
-        String corG = guitarraCorTextField.getText();
-        String cordasG = guitarraCordasTextField.getText();
-
-        Guitarra guitarra = new Guitarra(marcaG, modeloG, corG, cordasG);
-        System.out.println(guitarra.toString());
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Informação");
-        alert.setHeaderText(null);
-        alert.setContentText("Marca: " + marcaG + "\nModelo: " + modeloG + "\nCor: " + corG + "\nCordas: " + cordasG);
-        alert.showAndWait();
+    private void entrar() {
+        try {
+            Parent novaPagina = FXMLLoader.load(getClass().getResource("/com/e2/View/CadastroGuitarra.fxml"));
+            Scene cena = new Scene(novaPagina);
+            Stage novoStage = new Stage();
+            novoStage.setScene(cena);
+            novoStage.setTitle("Nova Página");
+            novoStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

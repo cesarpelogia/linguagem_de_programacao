@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e2.Controller.ProdutosController">
+   <children>
+      <Text fill="WHITE" layoutX="157.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guitarras Cadastradas" textAlignment="CENTER">
+         <font>
+            <Font name="Impact" size="31.0" />
+         </font>
+      </Text>
+      <TableView layoutX="61.0" layoutY="100.0" prefHeight="200.0" prefWidth="478.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="marcaColumn" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="modeloColumn" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="corColumn" prefWidth="75.0" text="Cor" />
+            <TableColumn fx:id="cordasColumn" prefWidth="75.0" text="Cordas" />
+            <TableColumn fx:id="deletarColumn" prefWidth="100.0" text="Deletar" />
+         </columns>
+      </TableView>
+   </children>
+</Pane>

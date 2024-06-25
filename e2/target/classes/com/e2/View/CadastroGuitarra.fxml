@@ -11,22 +11,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e2.Controller.CadastroGuitarraController">
    <children>
-      <VBox alignment="CENTER" fillWidth="false" layoutX="317.0" prefHeight="436.0" prefWidth="288.0">
+      <Button fx:id="criarGuitarra" contentDisplay="CENTER" layoutX="437.0" layoutY="385.0" mnemonicParsing="false" onAction="#criarGuitarra" text="Salvar" textAlignment="CENTER" />
+      <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="320.0" layoutY="41.0" prefHeight="46.0" prefWidth="281.0" text="Cadastro de Instrumentos" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="25.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" top="10.0" />
+         </padding>
+      </Label>
+      <VBox alignment="CENTER" fillWidth="false" layoutX="317.0" layoutY="89.0" prefHeight="280.0" prefWidth="288.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="46.0" prefWidth="256.0" text="Cadastro de Instrumentos" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets bottom="5.0" top="10.0" />
-               </padding>
-            </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Marca" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Marca" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -42,7 +40,7 @@
                   <Insets />
                </VBox.margin>
             </TextField>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Modelo" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Modelo" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -58,7 +56,7 @@
                   <Insets />
                </VBox.margin>
             </TextField>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Cor" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Cor" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -77,7 +75,7 @@
                   <Insets />
                </VBox.margin>
             </TextField>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Cordas" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Cordas" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -96,7 +94,6 @@
                   <Insets />
                </VBox.margin>
             </TextField>
-            <Button fx:id="salvarGuitarra" contentDisplay="CENTER" mnemonicParsing="false" onAction="#salvarGuitarra" text="Salvar" textAlignment="CENTER" />
          </children>
          <padding>
             <Insets left="15.0" right="15.0" />
@@ -111,4 +108,5 @@
          </image>
       </ImageView>
    </children>
+   
 </Pane>
