@@ -20,21 +20,20 @@ public class Aviao {
     public int getAno() {return Ano;}
 
     // Metodos
-    public boolean decolar() {
-        System.out.println("O avião está decolando");
+    public boolean planar() {
+        System.out.println("O avião está planando");
         return true;
     }
-    public boolean descer() {
-        System.out.println("O avião está descendo");
+    public boolean pousar() {
+        System.out.println("O avião está pousando");
         return true;
     }
-    public boolean virarADireita() {
-        System.out.println("O avião está virando a direita");
+    public boolean voar() {
+        System.out.println("O avião está voando");
         return true;
     }
-    public boolean virarAEsquerda() {
-        System.out.println("O avião está virando a esquerda");
+    public boolean girar() {
+        System.out.println("O avião está girando");
         return true;
     }
-    
 }

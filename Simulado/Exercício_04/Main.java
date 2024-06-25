@@ -13,10 +13,10 @@ public class Main {
         aviaoAzul.setAno(2020);
 
         // Chamando Metodos
-        aviaoAzul.decolar();
-        aviaoAzul.virarADireita();
-        aviaoAzul.virarAEsquerda();
-        aviaoAzul.descer();
+        aviaoAzul.planar();
+        aviaoAzul.pousar();
+        aviaoAzul.voar();
+        aviaoAzul.girar();
 
         // Instanciando Avião Verde
         Aviao aviaoVerde = new Aviao();
@@ -27,10 +27,10 @@ public class Main {
         aviaoVerde.setAno(2018);
 
         // Chamando Metodos
-        aviaoVerde.decolar();
-        aviaoVerde.virarADireita();
-        aviaoVerde.virarAEsquerda();
-        aviaoVerde.descer();
+        aviaoVerde.planar();
+        aviaoVerde.pousar();
+        aviaoVerde.voar();
+        aviaoVerde.girar();
 
         // Instanciando Avião Branco
         Aviao aviaoBranco = new Aviao();
@@ -41,9 +41,9 @@ public class Main {
         aviaoBranco.setAno(2016);
 
         // Chamando Metodos
-        aviaoBranco.decolar();
-        aviaoBranco.virarADireita();
-        aviaoBranco.virarAEsquerda();
-        aviaoBranco.descer();
+        aviaoBranco.planar();
+        aviaoBranco.pousar();
+        aviaoBranco.voar();
+        aviaoBranco.girar();
     }
 }
