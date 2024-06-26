@@ -5,15 +5,17 @@ import java.util.List;
 import com.e2.Model.Guitarra;
 import com.e2.Service.ProdutosService;
 
-import javafx.beans.property.SimpleStringProperty; // Add this import statement
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.util.Callback;
 
 public class ProdutosController {
@@ -34,12 +36,27 @@ public class ProdutosController {
     private TableColumn<Guitarra, String> cordasColumn;
 
     @FXML
+    private TextField marcaGTextField;
+
+    @FXML
+    private TextField modeloGTextField;
+
+    @FXML
+    private TextField corGTextField;
+
+    @FXML
+    private TextField cordaGTextField;
+
+    @FXML
+    private Button botaoAtualizar;
+    @FXML
     private ProdutosService produtosService = new ProdutosService();
 
     public void initialize() {
         System.out.println("ProdutosController inicializado");
         criarTabelaGuitarras();
         carregarGuitarras();
+        botaoAtualizar.setOnAction(event -> editarGuitarra());
     }
 
     public void criarTabelaGuitarras() {
@@ -81,13 +98,73 @@ public class ProdutosController {
             }
         };
 
-        marcaColumn.setStyle("-fx-aligment: CENTER;");
-        modeloColumn.setStyle("-fx-aligment: CENTER;");
-        corColumn.setStyle("-fx-aligment: CENTER;");
-        cordasColumn.setStyle("-fx-aligment: CENTER;");
+        marcaColumn.setStyle("-fx-alignment: CENTER;");
+        modeloColumn.setStyle("-fx-alignment: CENTER;");
+        corColumn.setStyle("-fx-alignment: CENTER;");
+        cordasColumn.setStyle("-fx-alignment: CENTER;");
         colunaDeletar.setCellFactory(cellFactory);
         guitarraTableView.getColumns().add(colunaDeletar);
     }
+
+    
+    @FXML
+    public void editarGuitarra() {
+        Guitarra guitarraAtualizada = guitarraTableView.getSelectionModel().getSelectedItem();
+        if (guitarraAtualizada != null) {
+            try {
+                String marca = marcaGTextField.getText();
+                String modelo = modeloGTextField.getText();
+                String cor = corGTextField.getText();
+                String corda = cordaGTextField.getText();
+                
+                if (marca.isEmpty() || modelo.isEmpty() || cor.isEmpty() || corda.isEmpty()) {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Aviso");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Por favor, preencha todos os campos antes de atualizar.");
+                    alert.showAndWait();
+                    return;
+                }
+                
+                guitarraAtualizada.setMarcaG(marca);
+                guitarraAtualizada.setModeloG(modelo);
+                guitarraAtualizada.setCorG(cor);
+                guitarraAtualizada.setCordaG(corda);
+                System.out.println(guitarraAtualizada);
+                produtosService.atualizarGuitarra(guitarraAtualizada);
+                carregarGuitarras();
+    
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informação");
+                alert.setHeaderText(null);
+                alert.setContentText("Guitarra atualizada com sucesso!");
+                alert.showAndWait();
+    
+                limparCampos();
+            } catch (Exception e) {
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                errorAlert.setTitle("Erro");
+                errorAlert.setHeaderText("Erro ao atualizar a guitarra");
+                errorAlert.setContentText(e.getMessage());
+                errorAlert.showAndWait();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Aviso");
+            alert.setHeaderText(null);
+            alert.setContentText("Nenhuma guitarra selecionada.");
+            alert.showAndWait();
+        }
+    }
+
+    private void limparCampos() {
+        marcaGTextField.clear();
+        modeloGTextField.clear();
+        corGTextField.clear();
+        cordaGTextField.clear();
+    }
+
+
 
     public void carregarGuitarras() {
             List<Guitarra> listaGuitarras = produtosService.buscarGuitarras();

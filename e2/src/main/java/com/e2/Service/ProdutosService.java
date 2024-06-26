@@ -1,5 +1,6 @@
 package com.e2.Service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.e2.Database.Database;
@@ -16,9 +17,9 @@ public class ProdutosService {
         return listaGuitarras;
     }
 
-    public void atualizarGuitarra(int id, String valor) {
+    public void atualizarGuitarra(Guitarra guitarra) throws SQLException {
         banco.conectarBanco();
-        banco.atualizarGuitarraNoBanco(id, valor);
+        banco.atualizarGuitarraNoBanco(guitarra);
         banco.fecharConexao();
     }
 

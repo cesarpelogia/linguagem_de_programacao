@@ -112,21 +112,16 @@ public class Database {
         return listaGuitarras;
     }
 
-    public void atualizarGuitarraNoBanco(int id, String valor) {
-        String sql = "UPDATE guitarra SET parametro = false, valor = ? WHERE idG = ?";
-        try {
-            conn = conectarBanco();
-            conn.setAutoCommit(false);
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, valor);
-            pstmt.setInt(2, id);
+    public void atualizarGuitarraNoBanco(Guitarra guitarra) throws SQLException {
+        String sql = "UPDATE guitarra SET marca = ?, modelo = ?, cor = ?, cordas = ? WHERE id = ?";
+
+        try (Connection conn = conectarBanco();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, guitarra.getMarcaG());
+            pstmt.setString(2, guitarra.getModeloG());
+            pstmt.setString(3, guitarra.getCorG());
+            pstmt.setString(4, guitarra.getCordaG());
             pstmt.executeUpdate();
-            conn.commit();
-            conn.close();
-        } catch (SQLException e) {
-            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
