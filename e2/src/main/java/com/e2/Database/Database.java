@@ -120,7 +120,7 @@ public class Database {
 
         try (Connection conn = conectarBanco();
             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, "guitarra.getMarcaG()");
+            pstmt.setString(1, guitarra.getMarcaG());
             pstmt.setString(2, guitarra.getModeloG());
             pstmt.setString(3, guitarra.getCorG());
             pstmt.setString(4, guitarra.getCordaG());
