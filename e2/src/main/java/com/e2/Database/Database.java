@@ -96,11 +96,12 @@ public class Database {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
+                String id = rs.getString("id");
                 String marcaG = rs.getString("marcaG");
                 String modeloG = rs.getString("modeloG");
                 String corG = rs.getString("corG");
                 String cordaG = rs.getString("cordaG");
-                Guitarra guitarra = new Guitarra(marcaG, modeloG, corG, cordaG);
+                Guitarra guitarra = new Guitarra(id,marcaG, modeloG, corG, cordaG);
                 listaGuitarras.add(guitarra);
             }
             conn.close();
@@ -113,14 +114,17 @@ public class Database {
     }
 
     public void atualizarGuitarraNoBanco(Guitarra guitarra) throws SQLException {
-        String sql = "UPDATE guitarra SET marca = ?, modelo = ?, cor = ?, cordas = ? WHERE id = ?";
+        String sql = "UPDATE guitarra SET marcag = ?, modelog = ?, corg = ?, cordag = ? WHERE id = ?";
+
+        System.out.println("id"+ guitarra.getId());
 
         try (Connection conn = conectarBanco();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, guitarra.getMarcaG());
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, "guitarra.getMarcaG()");
             pstmt.setString(2, guitarra.getModeloG());
             pstmt.setString(3, guitarra.getCorG());
             pstmt.setString(4, guitarra.getCordaG());
+            pstmt.setInt(5, Integer.parseInt(guitarra.getId()));
             pstmt.executeUpdate();
         }
     }

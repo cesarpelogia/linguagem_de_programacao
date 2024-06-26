@@ -109,8 +109,6 @@ public class ProdutosController {
     
     @FXML
     public void editarGuitarra() {
-        Guitarra guitarraAtualizada = guitarraTableView.getSelectionModel().getSelectedItem();
-        if (guitarraAtualizada != null) {
             try {
                 String marca = marcaGTextField.getText();
                 String modelo = modeloGTextField.getText();
@@ -126,10 +124,8 @@ public class ProdutosController {
                     return;
                 }
                 
-                guitarraAtualizada.setMarcaG(marca);
-                guitarraAtualizada.setModeloG(modelo);
-                guitarraAtualizada.setCorG(cor);
-                guitarraAtualizada.setCordaG(corda);
+                Guitarra guitarraAtualizada = new Guitarra(guitarraTableView.getSelectionModel().getSelectedItem().getId(), marca, modelo, cor, corda);
+
                 System.out.println(guitarraAtualizada);
                 produtosService.atualizarGuitarra(guitarraAtualizada);
                 carregarGuitarras();
@@ -142,18 +138,9 @@ public class ProdutosController {
     
                 limparCampos();
             } catch (Exception e) {
-                Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-                errorAlert.setTitle("Erro");
-                errorAlert.setHeaderText("Erro ao atualizar a guitarra");
-                errorAlert.setContentText(e.getMessage());
-                errorAlert.showAndWait();
-            }
-        } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Aviso");
-            alert.setHeaderText(null);
-            alert.setContentText("Nenhuma guitarra selecionada.");
-            alert.showAndWait();
+                System.out.println(e);
+                throw new RuntimeException(e);
+            
         }
     }
 

@@ -2,21 +2,26 @@ package com.e2.Model;
 
 public class Guitarra {
 
+    private String id;
     private String marcaG;
     private String modeloG;
     private String corG;
     private String cordaG;
 
-    public Guitarra(String marcaG, String modeloG, String corG, String cordaG) {
+    public Guitarra(String id, String marcaG, String modeloG, String corG, String cordaG) {
+        this.id = id;
         this.marcaG = marcaG;
         this.modeloG = modeloG;
         this.corG = corG;
         this.cordaG = cordaG;
     }
 
-    public Guitarra() {
+    public Guitarra( String marcaG, String modeloG, String corG, String cordaG) {
+        this.marcaG = marcaG;
+        this.modeloG = modeloG;
+        this.corG = corG;
+        this.cordaG = cordaG;
     }
-    
 
     // Metodos de Acesso Set:
 
@@ -38,6 +43,9 @@ public class Guitarra {
 
     // Metodos de Acesso Get
     
+    public String getId() {
+        return this.id;
+    }
     public String getMarcaG() {
         return this.marcaG;
     }
