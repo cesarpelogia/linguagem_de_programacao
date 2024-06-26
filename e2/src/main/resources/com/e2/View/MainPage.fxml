@@ -15,7 +15,7 @@
             <Image url="@closeup-black-electric-guitar-dark-background.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="entrar" contentDisplay="CENTER" layoutX="276.0" layoutY="369.0" mnemonicParsing="false" onAction="#entrar" text="Entrar" textAlignment="CENTER" />
+      <Button fx:id="cadastrar" contentDisplay="CENTER" layoutX="154.0" layoutY="369.0" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" textAlignment="CENTER" />
       <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="125.0" layoutY="297.0" prefHeight="46.0" prefWidth="350.0" text="Bem vindo à Loja de Guitarras" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Impact" size="27.0" />
@@ -24,5 +24,6 @@
             <Insets bottom="5.0" top="10.0" />
          </padding>
       </Label>
+      <Button fx:id="estoque" contentDisplay="CENTER" layoutX="363.0" layoutY="369.0" mnemonicParsing="false" onAction="#estoque" text="Estoque" textAlignment="CENTER" />
    </children>
 </Pane>

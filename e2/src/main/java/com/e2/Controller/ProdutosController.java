@@ -1,96 +1,97 @@
-// package com.e2.Controller;
+package com.e2.Controller;
 
-// import com.e2.Database.Database;
-// import com.e2.Model.Guitarra;
+import java.util.List;
 
-// import javafx.collections.ObservableList;
-// import javafx.fxml.FXML;
-// import javafx.scene.control.TableColumn;
-// import javafx.scene.control.TableView;
+import com.e2.Model.Guitarra;
+import com.e2.Service.ProdutosService;
 
-// public class ProdutosController {
+import javafx.beans.property.SimpleStringProperty; // Add this import statement
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.util.Callback;
 
-//     @FXML
-//     private TableView<Guitarra> guitarraTableView;
+public class ProdutosController {
 
-//     @FXML
-//     private TableColumn<Guitarra, Integer> idColumn;
+    @FXML
+    private TableView<Guitarra> guitarraTableView;
 
-//     @FXML
-//     private TableColumn<Guitarra, String> marcaColumn;
+    @FXML
+    private TableColumn<Guitarra, String> marcaColumn;
 
-//     @FXML
-//     private TableColumn<Guitarra, String> modeloColumn;
+    @FXML
+    private TableColumn<Guitarra, String> modeloColumn;
 
-//     @FXML
-//     private TableColumn<Guitarra, String> corColumn;
+    @FXML
+    private TableColumn<Guitarra, String> corColumn;
 
-//     @FXML
-//     private TableColumn<Guitarra, String> cordasColumn;
+    @FXML
+    private TableColumn<Guitarra, String> cordasColumn;
 
-//     @FXML
-//     private TableColumn<Guitarra, Void> ColumnButton;
+    @FXML
+    private ProdutosService produtosService = new ProdutosService();
 
-//     private ObservableList<Guitarra> guitarraObservableList;
+    public void initialize() {
+        System.out.println("ProdutosController inicializado");
+        criarTabelaGuitarras();
+        carregarGuitarras();
+    }
 
-//     private Database database;
-
-
-//     public void initialize() {
-//     //     List<Guitarra> guitarras = database.buscarGuitarras();
-//     //     criarTabela(guitarras);
-//     //     idColumn.setCellValueFactory(TextFieldTableCell.forTableColumn());
-//     //     marcaColumn.setCellValueFactory("marcaG"));
-//     //     modeloColumn.setCellValueFactory("modeloG"));
-//     //     corColumn.setCellValueFactory("corG"));
-//     //     cordasColumn.setCellValueFactory("cordaG"));
-//     //     guitarraTableView.setEditable(true);
-//     //     editarGuitarras();
-//     // }
-
-//     //     void criarTabela(List<Guitarra> guitarras) {
-//     //         guitarraObservableList = FXCollections.observableArrayList(guitarras);
-
-//     //     idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-//     //     marcaColumn.setCellValueFactory(new PropertyValueFactory<>("marcaG"));
-//     //     modeloColumn.setCellValueFactory(new PropertyValueFactory<>("modeloG"));
-//     //     corColumn.setCellValueFactory(new PropertyValueFactory<>("corG"));
-//     //     cordasColumn.setCellValueFactory(new PropertyValueFactory<>("cordaG"));
-
-//     //     ColumnButton.setCellFactory(param -> new TableCell<Guitarra, Void>(){
-//     //         private final Button button = new Button("Deletar");
-
-//     //         @Override
-//     //         protected void updateItem(Void item, boolean empty) {
-//     //             super.updateItem(item, empty);
-//     //             if (empty) {
-//     //                 setText(null);
-//     //             } else {
-//     //                 button.setOnAction(event -> {
-//     //                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-//     //                     alert.setTitle("Confirmação");
-//     //                     alert.setHeaderText("Deseja deletar esta guitarra?");
-
-//     //                     ButtonType ButtonTypeSim = new ButtonType("Sim", ButtonData.YES);
-//     //                     ButtonType ButtonTypeNao = new ButtonType("Não", ButtonData.NO);
-
-//     //                     alert.getButtonTypes().setAll(ButtonTypeSim, ButtonTypeNao);
-
-//     //                     Optional<ButtonType> result = alert.showAndWait();
-//     //                     if (result.isPresent() && result.get() == ButtonTypeSim) {
-//     //                         Guitarra guitarra = getTableView().getItems().get(getIndex());
-//     //                         database.deletarGuitarra();
-
-//     //                     }
-//     //                 });
-//     //                 setGraphic(button);
-//     //             }
-//     //         }
-//     //     });
+    public void criarTabelaGuitarras() {
+        // idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        marcaColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMarcaG()));
+        modeloColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getModeloG()));
+        corColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCorG()));
+        cordasColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCordaG()));
+        TableColumn<Guitarra, Void> colunaDeletar = new TableColumn<>("Deletar");
 
 
+        Callback<TableColumn<Guitarra, Void>, TableCell<Guitarra, Void>> cellFactory = new Callback<>() {
+            @Override
+            public TableCell<Guitarra, Void> call(final TableColumn<Guitarra, Void> param) {
+                final TableCell<Guitarra, Void> cell = new TableCell<>() {
+                    private final Button btn = new Button("Deletar");
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+                            Guitarra guitarra = getTableView().getItems().get(getIndex());
+                            try {
+                                ProdutosController.this.produtosService.deletarGuitarra(guitarra);
+                                ProdutosController.this.carregarGuitarras();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        });
+                    }
+                    @Override
+                    protected void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
 
+        marcaColumn.setStyle("-fx-aligment: CENTER;");
+        modeloColumn.setStyle("-fx-aligment: CENTER;");
+        corColumn.setStyle("-fx-aligment: CENTER;");
+        cordasColumn.setStyle("-fx-aligment: CENTER;");
+        colunaDeletar.setCellFactory(cellFactory);
+        guitarraTableView.getColumns().add(colunaDeletar);
+    }
 
-//         guitarraTableView.setItems(guitarraObservableList);
-//     }
-// }
+    public void carregarGuitarras() {
+            List<Guitarra> listaGuitarras = produtosService.buscarGuitarras();
+            ObservableList<Guitarra> observableList = FXCollections.observableList(listaGuitarras);
+            guitarraTableView.setItems(observableList);
+    }
+}

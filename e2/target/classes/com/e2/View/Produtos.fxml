@@ -13,14 +13,12 @@
             <Font name="Impact" size="31.0" />
          </font>
       </Text>
-      <TableView layoutX="61.0" layoutY="100.0" prefHeight="200.0" prefWidth="478.0">
+      <TableView fx:id="guitarraTableView" layoutX="61.0" layoutY="100.0" prefHeight="200.0" prefWidth="377.0">
          <columns>
-            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
             <TableColumn fx:id="marcaColumn" prefWidth="75.0" text="Marca" />
             <TableColumn fx:id="modeloColumn" prefWidth="75.0" text="Modelo" />
             <TableColumn fx:id="corColumn" prefWidth="75.0" text="Cor" />
             <TableColumn fx:id="cordasColumn" prefWidth="75.0" text="Cordas" />
-            <TableColumn fx:id="deletarColumn" prefWidth="100.0" text="Deletar" />
          </columns>
       </TableView>
    </children>

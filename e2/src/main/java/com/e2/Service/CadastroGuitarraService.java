@@ -12,23 +12,4 @@ public class CadastroGuitarraService {
         banco.cadastrarGuitarraNoBanco(guitarra);
         banco.fecharConexao();
     }
-
-    // public List<Guitarra> buscarGuitarras() {
-    //     banco.conectarBanco();
-    //     List<Guitarra> guitarras = banco.buscarGuitarrasNoBanco();
-    //     banco.fecharConexao();
-    //     return guitarras;
-    // }
-
-    // public void atualizarGuitarra(Guitarra guitarra) {
-    //     banco.conectarBanco();
-    //     banco.atualizarGuitarraNoBanco(guitarra);
-    //     banco.fecharConexao();
-    // }
-
-    // public void deletarGuitarra(Guitarra guitarra) {
-    //     banco.conectarBanco();
-    //     banco.deletarGuitarraNoBanco(guitarra);
-    //     banco.fecharConexao();
-    // }
 }
